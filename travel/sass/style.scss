@@ -1,0 +1,212 @@
+$color-orange: #ff6332;
+$color-white: #fff;
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.conainer {
+  padding: 0 14px;
+  margin: 0 auto;
+  max-width: 1377px;
+}
+
+.header {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.49),
+      rgba(0, 0, 0, 0.49)
+    ),
+    url(../img/Rectangle.png);
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-bottom: 32px;
+  &__title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 70%;
+    letter-spacing: 0.05em;
+    color: $color-white;
+    text-transform: uppercase;
+    i {
+      font-weight: 900;
+      font-style: normal;
+      color: $color-orange;
+    }
+  }
+}
+
+main {
+  .collage {
+    margin-bottom: 32px;
+    &__photo {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      li {
+        max-width: 437px;
+        max-height: 294px;
+        &:not(:last-child) {
+          margin-bottom: 16px;
+        }
+        img {
+          max-width: 437px;
+          max-height: 294px;
+        }
+      }
+    }
+  }
+  .instagram {
+    background-color: #c4c4c4;
+    // .container {
+    // }
+    // h2 {
+    //   display: flex;
+    //   justify-content: center;
+    //   // transform: rotate(90deg);
+    //   font-size: 18px;
+    //   font-weight: 300;
+    //   letter-spacing: 0.05em;
+    //   text-transform: uppercase;
+    //   color: $color-white;
+    //   i {
+    //     font-weight: 900;
+    //     font-style: inherit;
+    //     color: $color-orange;
+    //     margin-right: 7px;
+    //   }
+    // }
+    &__photo {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      li {
+        display: flex;
+        img {
+          filter: brightness(50%);
+        }
+      }
+    }
+  }
+}
+
+.footer {
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  p {
+    font-size: 11px;
+    font-weight: 300;
+    letter-spacing: 0.05em;
+    color: $color-white;
+  }
+}
+
+@media only screen and (min-width: 720px) {
+  .header {
+    margin-bottom: 32px;
+    &__title {
+      font-size: 48px;
+    }
+  }
+
+  main {
+    .collage {
+      margin-bottom: 32px;
+      &__photo {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        li {
+          &:not(:last-child) {
+            margin-bottom: 16px;
+          }
+          &:nth-child(9) {
+            margin-bottom: 0;
+          }
+          &:nth-child(1),
+          &:nth-child(2),
+          &:nth-child(4),
+          &:nth-child(5),
+          &:nth-child(7),
+          &:nth-child(8) {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+    .instagram {
+      // h2 {
+      //   top: 270px;
+      //   left: 140px;
+      //   z-index: 20;
+      //   font-size: 30px;
+      // }
+      &__photo {
+        flex-wrap: wrap;
+        flex-direction: row;
+      }
+    }
+  }
+  .footer {
+    height: 69px;
+    p {
+      font-size: 18px;
+    }
+  }
+}
+
+@media only screen and (min-width: 1377px) {
+  .header {
+    margin-bottom: 64px;
+  }
+
+  main {
+    .collage {
+      margin-bottom: 64px;
+      &__photo {
+        flex-direction: row;
+        flex-wrap: wrap;
+        li {
+          &:not(:last-child) {
+            margin-bottom: 32px;
+          }
+          &:nth-child(7),
+          &:nth-child(8),
+          &:nth-child(9) {
+            margin-bottom: 0;
+          }
+          &:nth-child(1),
+          &:nth-child(2),
+          &:nth-child(4),
+          &:nth-child(5),
+          &:nth-child(7),
+          &:nth-child(8) {
+            margin-right: 32px;
+          }
+        }
+      }
+    }
+    // .instagram {
+    //   h2 {
+    //     top: 259px;
+    //     left: 327px;
+    //     z-index: 20;
+    //     font-size: 48px;
+    //   }
+    // }
+  }
+}

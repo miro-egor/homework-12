@@ -1,0 +1,150 @@
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.conainer {
+  padding: 0 14px;
+  margin: 0 auto;
+  max-width: 1377px;
+}
+
+.header {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.49), rgba(0, 0, 0, 0.49)), url(../img/Rectangle.png);
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-bottom: 32px;
+}
+.header__title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 70%;
+  letter-spacing: 0.05em;
+  color: #fff;
+  text-transform: uppercase;
+}
+.header__title i {
+  font-weight: 900;
+  font-style: normal;
+  color: #ff6332;
+}
+
+main .collage {
+  margin-bottom: 32px;
+}
+main .collage__photo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+main .collage__photo li {
+  max-width: 437px;
+  max-height: 294px;
+}
+main .collage__photo li:not(:last-child) {
+  margin-bottom: 16px;
+}
+main .collage__photo li img {
+  max-width: 437px;
+  max-height: 294px;
+}
+main .instagram {
+  background-color: #c4c4c4;
+}
+main .instagram__photo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+main .instagram__photo li {
+  display: flex;
+}
+main .instagram__photo li img {
+  filter: brightness(50%);
+}
+
+.footer {
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+.footer p {
+  font-size: 11px;
+  font-weight: 300;
+  letter-spacing: 0.05em;
+  color: #fff;
+}
+
+@media only screen and (min-width: 720px) {
+  .header {
+    margin-bottom: 32px;
+  }
+  .header__title {
+    font-size: 48px;
+  }
+
+  main .collage {
+    margin-bottom: 32px;
+  }
+  main .collage__photo {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+  main .collage__photo li:not(:last-child) {
+    margin-bottom: 16px;
+  }
+  main .collage__photo li:nth-child(9) {
+    margin-bottom: 0;
+  }
+  main .collage__photo li:nth-child(1), main .collage__photo li:nth-child(2), main .collage__photo li:nth-child(4), main .collage__photo li:nth-child(5), main .collage__photo li:nth-child(7), main .collage__photo li:nth-child(8) {
+    margin-right: 0;
+  }
+  main .instagram__photo {
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+
+  .footer {
+    height: 69px;
+  }
+  .footer p {
+    font-size: 18px;
+  }
+}
+@media only screen and (min-width: 1377px) {
+  .header {
+    margin-bottom: 64px;
+  }
+
+  main .collage {
+    margin-bottom: 64px;
+  }
+  main .collage__photo {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  main .collage__photo li:not(:last-child) {
+    margin-bottom: 32px;
+  }
+  main .collage__photo li:nth-child(7), main .collage__photo li:nth-child(8), main .collage__photo li:nth-child(9) {
+    margin-bottom: 0;
+  }
+  main .collage__photo li:nth-child(1), main .collage__photo li:nth-child(2), main .collage__photo li:nth-child(4), main .collage__photo li:nth-child(5), main .collage__photo li:nth-child(7), main .collage__photo li:nth-child(8) {
+    margin-right: 32px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
