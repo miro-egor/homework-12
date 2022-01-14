@@ -6,7 +6,7 @@ body {
 }
 
 .conainer {
-  padding: 0 14px;
+  padding: 0 15px;
   margin: 0 auto;
   max-width: 1377px;
 }
@@ -45,56 +45,62 @@ body {
 
 main {
   .collage {
+    display: flex;
+    justify-content: center;
+    padding: 0 15px;
     margin-bottom: 32px;
     &__photo {
       display: flex;
       flex-direction: column;
-      justify-content: center;
       align-items: center;
-      overflow: hidden;
       li {
-        max-width: 437px;
-        max-height: 294px;
         &:not(:last-child) {
           margin-bottom: 16px;
         }
         img {
-          max-width: 437px;
-          max-height: 294px;
+          max-width: 100%;
         }
       }
     }
   }
   .instagram {
+    display: flex;
+    position: relative;
     background-color: #c4c4c4;
-    // .container {
-    // }
-    // h2 {
-    //   display: flex;
-    //   justify-content: center;
-    //   // transform: rotate(90deg);
-    //   font-size: 18px;
-    //   font-weight: 300;
-    //   letter-spacing: 0.05em;
-    //   text-transform: uppercase;
-    //   color: $color-white;
-    //   i {
-    //     font-weight: 900;
-    //     font-style: inherit;
-    //     color: $color-orange;
-    //     margin-right: 7px;
-    //   }
-    // }
-    &__photo {
+    &__title {
       display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      overflow: hidden;
+      text-align: center;
+      position: absolute;
+      top: 48%;
+      left: 7%;
+      z-index: 5;
+      span {
+        font-size: 18px;
+        font-weight: 300;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: $color-white;
+        i {
+          font-style: inherit;
+          font-weight: 900;
+          color: $color-orange;
+        }
+        &::before {
+          content: "#";
+        }
+      }
+    }
+    &__photo {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
       li {
         display: flex;
+        float: left;
+        width: 50%;
         img {
-          filter: brightness(50%);
+          width: 100%;
+          filter: brightness(49%);
         }
       }
     }
@@ -115,79 +121,21 @@ main {
   }
 }
 
-@media only screen and (min-width: 720px) {
-  .header {
-    margin-bottom: 32px;
-    &__title {
-      font-size: 48px;
-    }
-  }
-
-  main {
-    .collage {
-      margin-bottom: 32px;
-      &__photo {
-        flex-direction: row;
-        flex-wrap: wrap;
-        align-items: flex-start;
-        li {
-          &:not(:last-child) {
-            margin-bottom: 16px;
-          }
-          &:nth-child(9) {
-            margin-bottom: 0;
-          }
-          &:nth-child(1),
-          &:nth-child(2),
-          &:nth-child(4),
-          &:nth-child(5),
-          &:nth-child(7),
-          &:nth-child(8) {
-            margin-right: 0;
-          }
-        }
-      }
-    }
-    .instagram {
-      // h2 {
-      //   top: 270px;
-      //   left: 140px;
-      //   z-index: 20;
-      //   font-size: 30px;
-      // }
-      &__photo {
-        flex-wrap: wrap;
-        flex-direction: row;
-      }
-    }
-  }
-  .footer {
-    height: 69px;
-    p {
-      font-size: 18px;
-    }
-  }
-}
-
-@media only screen and (min-width: 1377px) {
-  .header {
-    margin-bottom: 64px;
-  }
-
+@media only screen and (min-width: 768px) {
+ 
   main {
     .collage {
       margin-bottom: 64px;
       &__photo {
         flex-direction: row;
         flex-wrap: wrap;
+        justify-content: center;
         li {
           &:not(:last-child) {
             margin-bottom: 32px;
           }
-          &:nth-child(7),
-          &:nth-child(8),
           &:nth-child(9) {
-            margin-bottom: 0;
+            margin-bottom: 32px;
           }
           &:nth-child(1),
           &:nth-child(2),
@@ -200,13 +148,19 @@ main {
         }
       }
     }
-    // .instagram {
-    //   h2 {
-    //     top: 259px;
-    //     left: 327px;
-    //     z-index: 20;
-    //     font-size: 48px;
-    //   }
-    // }
+    .instagram {
+      &__title {
+        top: 45%;
+        left: 22%;
+        span {
+          font-size: 48px;
+        }
+      }
+      &__photo {
+        li {
+          width: 25%;
+        }
+      }
+    }
   }
 }
